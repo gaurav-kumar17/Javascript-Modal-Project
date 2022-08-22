@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal</title>
+    <title>Modal Project</title>
     <style>
         * {
 
@@ -97,6 +97,33 @@
         </div>
     </div>
 
+    <script>
+        let openBtn=document.getElementById('open-btn');
+        let modalContainer=document.getElementById("modal-container");
+
+        let closeBtn=document.getElementById('close-btn');
+
+        //Event listener
+
+        openBtn.addEventListener('click',function(){
+
+            modalContainer.style.display="block";
+        })
+
+        closeBtn.addEventListener('click',function(){
+
+            modalContainer.style.display="none";
+        })
+
+        window.addEventListener('click',function(e){
+
+            // if modalcontainer is present on windows then only it will work
+            if(e.target=== modalContainer)
+            {
+                modalContainer.style.display="none";
+            }
+        })
+    </script>
    
 </body>
 
